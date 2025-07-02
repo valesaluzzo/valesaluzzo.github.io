@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="español">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentina Saluzzo</title>
+    <!-- CONEXION AL ARCHIVO CSS -->
+    <link rel="stylesheet" href="estilo.css"> 
+     <!--FUENTE DE GOOGLE  -->
+    <link href="https://fonts.google.com/noto/specimen/Noto+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- ESTE DIV VA A CUBRIR TODA LA PANTALLA Y VAA MOSTAR PASTICULAS -->
+    <div id="particles-js"></div>
+
+    <div class="container">
+        <h1>Valentina Saluzzo</h1> 
+        <p class="border-box">Soy estudiante de Ingeniería en Sistemas y apasionada por la tecnología. Me encanta aprender y construir cosas nuevas.</p>
+
+        <h3>MIS REDES</h3>
+        <ul>
+            <li>
+                <a href="https://www.linkedin.com/in/valentina-saluzzo-205bb9301/" target="_blank">
+                    <!-- EL i CON CLASES ESPECIALES CREA EL ICONO -->
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/valesaluzzo" target="_blank">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+            </li>
+        </ul>
+        
+        <h3>HABILIDADES</h3> 
+        <ul>
+            <li>Buen manejo de paquete Microsoft 365</li>
+            <li>Herramientas Google</li>
+            <li>Fundamentos en Python, JavaScript, HTML,CSS, Git y GitHub</li>
+        </ul>
+
+        <h3>EXPERIENCIA</h3>
+        <ul>
+            <li><strong>Proyecto personal:</strong>Pagina web para un emprendimiento.</li>
+        </ul>
+
+        <!-- BOTON PARA PODER DESCARGAR MI CV -->
+        <a href="curriculum Vitae.pdf" download class="btn-contacto" style="margin-top: 10px;">Descargar CV</a>
+
+        <!-- BOTON PARA MOSTRAR LA INFORMACION DEL CONTACTO -->
+        <button onclick="mostrarContacto()" class="btn-contacto">CONTACTO</button>
+        <!-- PARTE OCULTA DEL BOTON CONTACTO -->
+        <div id="info-extra" class="">
+        <p><strong>Email:</strong>valu30@hotmail.com.ar</p>
+        <p><strong>Telefono Celular:</strong>3535626271</p>
+        </form>
+        </div>
+    </div>
+
+    <!-- JavaScript QUE MUESTRA LA SECCION DE CONTACTO -->
+  <script>
+    function mostrarContacto() {
+      const info = document.getElementById("info-extra");
+      info.classList.toggle("visible"); // Activa o desactiva la visibilidad
+    }
+  </script>
+
+    <!--  -->
+      <!-- Particles.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+    <!-- Configuración personalizada -->
+    <script> particlesJS("particles-js", {
+    particles: {
+      number: {
+        value: 80,
+        density: { enable: true, value_area: 800 }
+      },
+      color: { value: "#e91e63" },
+      shape: { type: "circle" },
+      opacity: { value: 0.5, random: false },
+      size: { value: 3, random: true },
+      move: {
+        enable: true,
+        speed: 2,
+        direction: "none",
+        random: true,
+        straight: false,
+        out_mode: "out"
+      }
+    },
+    interactivity: {
+      detect_on: "canvas",
+      events: {
+        onhover: { enable: true, mode: "repulse" },
+        onclick: { enable: true, mode: "push" }
+      },
+      modes: {
+        repulse: { distance: 100, duration: 0.4 },
+        push: { particles_nb: 4 }
+      }
+    },
+    retina_detect: true
+  });
+</script>
+</body>
+</html>
